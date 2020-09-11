@@ -61,7 +61,7 @@ python -m blaseball_core_game_data
 
 ### Game Data
 
-Game data lives here (WARNING: LARGE FILE NOT OPTIMIZED FOR VIEWING!): [`blaseball_core_game_data/data/game_data_trim.json`](https://github.com/ch4zm/blaseball-core-game-data/tree/master/blaseball_core_game_data/data/game_data_trim.json)
+Game data lives here (WARNING: LARGE FILE NOT OPTIMIZED FOR VIEWING!): [`blaseball_core_game_data/data/game_data_trim.json`](https://github.com/ch4zm/blaseball-core-game-data/blob/master/blaseball_core_game_data/data/games_data_trim.json)
 
 Here is the list of keys provided in the game data
 (there is a list of dictionaries provided, with each
