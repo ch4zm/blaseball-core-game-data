@@ -45,3 +45,7 @@ The columns in the data frame are as follows:
 * winningOdds
 * winningPitcherName
 
+# `bump_version_number.py`
+
+This script will bump the version number that is in `blaseball_core_game_data/__init__.py`
+to be one minor version larger. Used in automated deployment of new versions.
