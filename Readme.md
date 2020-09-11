@@ -18,7 +18,7 @@ import blaseball_core_game_data as gd
 games = json.loads(gd.get_games_data())
 
 # Get team/league/division data in a Python dictionary
-teams = jsonloads(gd.get_teams_data())
+teams = json.loads(gd.get_teams_data())
 ```
 
 That's all there is to it!
