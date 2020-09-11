@@ -33,13 +33,13 @@ make update || { echo "Failed make update step"; exit 1; }
 
 # build and upload
 make clean
-make build || { echo "Failed make build step"; exit 1; } 
+make build || { echo "Failed make build step"; exit 1; }
 make dist || { echo "Failed make dist step"; exit 1; }
-make distcheck || { echo "Failed make distcheck step"; exit 1; } 
+make distcheck || { echo "Failed make distcheck step"; exit 1; }
 
 echo "Everything checks out. Uploading to testpypi, then pypi..."
-make testpypi || {echo "Failed make testpypi step"; exit 1}  
-make pypi || {echo "Failed make pypi step"; exit 1}   
+make testpypi || {echo "Failed make testpypi step"; exit 1; }
+make pypi || {echo "Failed make pypi step"; exit 1; }
 echo "Done!"
 
 echo "Making git tag"
