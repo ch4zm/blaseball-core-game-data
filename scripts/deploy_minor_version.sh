@@ -8,6 +8,7 @@ ROOTDIR=$SCRIPTDIR/..
 echo "Script dir: $SCRIPTDIR"
 
 cd $ROOTDIR
+rm -fr $ROOTDIR/.releasevp
 
 # make sure we are on correct branch
 git checkout master
@@ -17,8 +18,8 @@ virtualenv -p python3.6 $ROOTDIR/.releasevp
 source $ROOTDIR/.releasevp/bin/activate
 
 # bump version num in src code
-$ROOTDIR/.releasevp/bin/python $ROOTDIR/scripts/bump_version_number.py
-echo "Bumped source code to new version"
+VERSION=$($ROOTDIR/.releasevp/bin/python $ROOTDIR/scripts/bump_version_number.py)
+echo "Bumped source code to $VERSION"
 
 echo "Making things..."
 make clean
@@ -37,27 +38,15 @@ make dist || { echo "Failed make dist step"; exit 1; }
 make distcheck || { echo "Failed make distcheck step"; exit 1; } 
 
 echo "Everything checks out. Uploading to testpypi, then pypi..."
-#make testpypi || {echo "Failed make testpypi step"; exit 1}  
-#make pypi || {echo "Failed make pypi step"; exit 1}   
+make testpypi || {echo "Failed make testpypi step"; exit 1}  
+make pypi || {echo "Failed make pypi step"; exit 1}   
 echo "Done!"
 
 echo "Making git tag"
 git add blaseball_core_game_data/
-git commit blaseball_core_game_data/ -m "auto-update to new version"
-#git tag $NEWV
-#git push --tags ch4zm master
-
-#NEWV=$(./../vp/bin/python ./scripts/bump_version_number.py)
-#echo $NEWV
-#git add blaseball_core_game_data/__init__.py
-#git commit blaseball_core_game_data/__init__.py -m 'auto-update to new version'
-#make build
-#make dist
-#make distcheck
-#make testpypi
-#make pypi
-#git tag $(NEWV)
-#git push --tags ch4zm
+git commit blaseball_core_game_data/ -m "auto-update to version $VERSION"
+git tag $VERSION
+git push --tags ch4zm master
 
 # Clean up
 deactivate
