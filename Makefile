@@ -1,6 +1,16 @@
 help:
 	cat Makefile
 
+deploy_minor_version: distcheck
+	python ./scripts/bump_version_number.py && \
+	git add blaseball_core_game_data/__init__.py && \
+	git commit blaseball_core_game_data/__init__.py -m 'auto-update to new version' && \
+	make build && \
+	make dist && \
+	make distcheck && \
+	make testpypi && \
+	make pypi
+
 requirements:
 	python3 -m pip install --upgrade -r requirements.txt
 
