@@ -1,0 +1,2 @@
+include blaseball_core_game_data/data/*.json
+
