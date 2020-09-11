@@ -1,6 +1,7 @@
 memo
 vp
 attic
+.releasevp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
