@@ -47,5 +47,6 @@ The columns in the data frame are as follows:
 
 # `bump_version_number.py`
 
-This script will bump the version number that is in `blaseball_core_game_data/__init__.py`
-to be one minor version larger. Used in automated deployment of new versions.
+This program will parse the `__init__.py` file of the project and
+increment the `__version__` variable by the smallest amount possible
+(so 0.5 will become 0.6, 0.5.1 will become 0.5.2, etc.)
