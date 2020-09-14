@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+PKG_NAME='blaseball_core_game_data'
+
 # bump version num in src code
 while test $# -gt 0; do
     case "$1" in
@@ -79,8 +81,8 @@ make pypi || { echo "Failed make pypi step"; exit 1; }
 echo "Done!"
 
 echo "Making git tag"
-git add interesting_blaseball_games
-git commit interesting_blaseball_games -m "auto-update to version $VERSION"
+git add $PKG_NAME
+git commit $PKG_NAME -m "auto-update to version $VERSION"
 git tag $VERSION
 git push --tags ch4zm master
 
