@@ -10,7 +10,7 @@ that JSON file.
 
 This makes obtaining JSON data about every blaseball game as simple as:
 
-```
+```python
 import json
 import blaseball_core_game_data as gd
 
@@ -110,7 +110,7 @@ NOTE: This file contains `Dale` rather than `Dal\u00e9`, for convenience but
 in contrast to the way the team's name is formatted in most API responses.
 (Be careful!)
 
-Team, league, and division data lives here: [`src/data/game_data_trim.json`](https://github.com/ch4zm/blaseball-core-game-data/tree/master/blaseball_core_game_data/data/teams_data.json)
+Team, league, and division data lives here: [`blaseball_core_game_data/data/game_data_trim.json`](https://github.com/ch4zm/blaseball-core-game-data/tree/master/blaseball_core_game_data/data/teams_data.json)
 
 Contains two keys, `divisions` and `leagues`, whose keys are the names of the
 divisions/leagues, and whose values are the nicknames of the teams in the
@@ -130,6 +130,6 @@ To run the script to update the blaseball game data, use this command:
 python3 scripts/fetch_game_data.py
 ```
 
-This will update the data in `src/data/`, which will be included
+This will update the data in `blaseball_core_game_data/data/`, which will be included
 with the package when it is prepared for distribution.
 
