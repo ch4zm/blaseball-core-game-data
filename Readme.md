@@ -59,6 +59,22 @@ python -m blaseball_core_game_data
 
 ## The Data
 
+### Legal Notice
+
+We are obligated to inform end users that, as per _Wild Wings v. The Commissioner_
+and the subsequent outcome of the Season 7 Internet Series, this software 
+**uses the club name "Wild Wings" exclusively.** Furthermore, the software
+adheres to the following principles:
+
+* The core data set in `blaseball-core-game-data` refers to the Mexico City
+  Wild Wings blaseball club _exclusively_ as the "Wild Wings."
+* The core data set has been filtered to remove any references to the "Mild Wings"
+  or "Wexico City."
+* The actions of the Commissioner were unjustified and create an unnecessary
+  need to refactor code, and it's already hard enough having to deal with
+  Unicode, okay?
+
+
 ### Game Data
 
 Game data lives here (WARNING: LARGE FILE NOT OPTIMIZED FOR VIEWING!): [`blaseball_core_game_data/data/game_data_trim.json`](https://github.com/ch4zm/blaseball-core-game-data/blob/master/blaseball_core_game_data/data/games_data_trim.json)
