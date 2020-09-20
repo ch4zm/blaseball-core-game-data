@@ -82,14 +82,6 @@ def postprocess_game_data(gameData):
         for key in keep_keys:
             trim[key] = game[key]
 
-        # Wings are not mild, ugh
-        if 'Mild' in trim['homeTeamName']:
-            trim['homeTeamName']=='Mexico City Wild Wings'
-            trim['homeTeamNickname']=='Wild Wings'
-        if 'Mild' in trim['awayTeamName']:
-            trim['awayTeamName']=='Mexico City Wild Wings'
-            trim['awayTeamNickname']=='Wild Wings'
-
         # Keys to add:
         add_keys = ['TeamName', 'TeamNickname', 'TeamEmoji', 'Score', 'Odds', 'PitcherName']
         for key in add_keys:
@@ -100,6 +92,20 @@ def postprocess_game_data(gameData):
             away_key = "away" + key
             trim[winning_key] = game[home_key] if game['homeScore'] > game['awayScore'] else game[away_key]
             trim[losing_key] = game[home_key] if game['homeScore'] < game['awayScore'] else game[away_key]
+
+        # Wings are not mild, ugh
+        if 'Mild' in trim['homeTeamName']:
+            trim['homeTeamName']='Mexico City Wild Wings'
+            trim['homeTeamNickname']='Wild Wings'
+        if 'Mild' in trim['awayTeamName']:
+            trim['awayTeamName']='Mexico City Wild Wings'
+            trim['awayTeamNickname']='Wild Wings'
+        if 'Mild' in trim['winningTeamName']:
+            trim['winningTeamName']='Mexico City Wild Wings'
+            trim['winningTeamNickname']='Wild Wings'
+        if 'Mild' in trim['losingTeamName']:
+            trim['losingTeamName']='Mexico City Wild Wings'
+            trim['losingTeamNickname']='Wild Wings'
 
         # add more keys here (hard-coded formulas)
         trim['runDiff'] = abs(game['homeScore'] - game['awayScore'])
