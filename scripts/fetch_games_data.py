@@ -83,18 +83,12 @@ def postprocess_game_data(gameData):
             trim[key] = game[key]
 
         # Wings are not mild, ugh
-        mild = 'Mexico City Mild Wings'
-        wild = 'Mexico City Wild Wings'
-        if trim['homeTeamName']==mild:
-            trim['homeTeamName']==wild
-        if trim['awayTeamName']==mild:
-            trim['awayTeamName']==wild
-        mild = 'Mild Wings'
-        wild = 'Wild Wings'
-        if trim['homeTeamNickname']==mild:
-            trim['homeTeamNickname']==wild
-        if trim['awayTeamNickname']==mild:
-            trim['awayTeamNickname']==wild
+        if 'Mild' in trim['homeTeamName']:
+            trim['homeTeamName']=='Mexico City Wild Wings'
+            trim['homeTeamNickname']=='Wild Wings'
+        if 'Mild' in trim['awayTeamName']:
+            trim['awayTeamName']=='Mexico City Wild Wings'
+            trim['awayTeamNickname']=='Wild Wings'
 
         # Keys to add:
         add_keys = ['TeamName', 'TeamNickname', 'TeamEmoji', 'Score', 'Odds', 'PitcherName']
