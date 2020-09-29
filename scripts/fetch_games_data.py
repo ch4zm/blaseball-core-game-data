@@ -11,6 +11,12 @@ data_path = os.path.abspath(os.path.join(root_path, 'blaseball_core_game_data', 
 GAMES_DATA_JSON = os.path.join(data_path, "games_data_trim.json")
 UPDATE_DATA_JSON = os.path.join(data_path, "update_data.json")
 
+DALE_SAFE = "Dale" # for command line
+DALE_UTF8 = "Dal\u00e9" # for display
+
+FULL_DALE_SAFE = "Miami Dale" # for command line
+FULL_DALE_UTF8 = "Miami Dal\u00e9" # for display
+
 
 def main():
     print("Loading data")
@@ -97,15 +103,27 @@ def postprocess_game_data(gameData):
         if 'Mild' in trim['homeTeamName']:
             trim['homeTeamName']='Mexico City Wild Wings'
             trim['homeTeamNickname']='Wild Wings'
-        if 'Mild' in trim['awayTeamName']:
+        elif 'Mild' in trim['awayTeamName']:
             trim['awayTeamName']='Mexico City Wild Wings'
             trim['awayTeamNickname']='Wild Wings'
+
         if 'Mild' in trim['winningTeamName']:
             trim['winningTeamName']='Mexico City Wild Wings'
             trim['winningTeamNickname']='Wild Wings'
-        if 'Mild' in trim['losingTeamName']:
+        elif 'Mild' in trim['losingTeamName']:
             trim['losingTeamName']='Mexico City Wild Wings'
             trim['losingTeamNickname']='Wild Wings'
+
+        # Always preserve unicode in Dale (desanitized)
+        if trim['homeTeamName']==FULL_DALE_SAFE:
+            trim['homeTeamName'] = FULL_DALE_UTF8
+        elif trim['awayTeamName']==FULL_DALE_SAFE:
+            trim['awayTeamName'] = FULL_DALE_UTF8
+
+        if trim['homeTeamNickname']==DALE_SAFE:
+            trim['homeTeamNickname'] = DALE_UTF8
+        elif trim['awayTeamNickname']==DALE_SAFE:
+            trim['awayTeamNickname'] = DALE_UTF8
 
         # add more keys here (hard-coded formulas)
         trim['runDiff'] = abs(game['homeScore'] - game['awayScore'])
@@ -120,7 +138,6 @@ def get_game_day():
     client = sseclient.SSEClient("https://www.blaseball.com/events/streamData")
     singleEvent = next(client) #.events())
     sim = json.loads(singleEvent.data)["value"]["games"]["sim"]
-    print("season %s\nday %s"%(sim["season"], sim["day"]))
     return (sim["season"], sim["day"])
 
 
