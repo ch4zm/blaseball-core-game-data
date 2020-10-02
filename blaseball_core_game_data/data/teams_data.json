@@ -1,58 +1,469 @@
-{
-    "divisions": {
-        "Lawful Good": [
-            "Lovers",
-            "Tacos",
-            "Steaks",
-            "Breath Mints",
-            "Firefighters"
-        ],
-        "Chaotic Good": [
-            "Shoe Thieves",
-            "Flowers",
-            "Fridays",
-            "Magic",
-            "Millennials"
-        ],
-        "Lawful Evil": [
-            "Crabs",
-            "Pies",
-            "Sunbeams",
-            "Wild Wings",
-            "Tigers"
-        ],
-        "Chaotic Evil": [
-            "Moist Talkers",
-            "Spies",
-            "Dale",
-            "Garages",
-            "Jazz Hands"
-        ]
+[
+    {
+        "divisions": {
+            "Lawful Good": [
+                "Lovers",
+                "Tacos",
+                "Steaks",
+                "Breath Mints",
+                "Firefighters"
+            ],
+            "Chaotic Good": [
+                "Shoe Thieves",
+                "Flowers",
+                "Fridays",
+                "Magic",
+                "Millennials"
+            ],
+            "Lawful Evil": [
+                "Crabs",
+                "Pies",
+                "Sunbeams",
+                "Wild Wings",
+                "Tigers"
+            ],
+            "Chaotic Evil": [
+                "Moist Talkers",
+                "Spies",
+                "Dale",
+                "Garages",
+                "Jazz Hands"
+            ]
+        },
+        "leagues": {
+            "Good": [
+                "Lovers",
+                "Tacos",
+                "Steaks",
+                "Breath Mints",
+                "Firefighters",
+                "Shoe Thieves",
+                "Flowers",
+                "Fridays",
+                "Magic",
+                "Millennials"
+            ],
+            "Evil": [
+                "Crabs",
+                "Pies",
+                "Sunbeams",
+                "Wild Wings",
+                "Tigers",
+                "Moist Talkers",
+                "Spies",
+                "Dale",
+                "Garages",
+                "Jazz Hands"
+            ]
+        }
     },
-    "leagues": {
-        "Good": [
-            "Lovers",
-            "Tacos",
-            "Steaks",
-            "Breath Mints",
-            "Firefighters",
-            "Shoe Thieves",
-            "Flowers",
-            "Fridays",
-            "Magic",
-            "Millennials"
-        ],
-        "Evil": [
-            "Crabs",
-            "Pies",
-            "Sunbeams",
-            "Wild Wings",
-            "Tigers",
-            "Moist Talkers",
-            "Spies",
-            "Dale",
-            "Garages",
-            "Jazz Hands"
-        ]
+    {
+        "divisions": {
+            "Lawful Good": [
+                "Lovers",
+                "Tacos",
+                "Steaks",
+                "Breath Mints",
+                "Firefighters"
+            ],
+            "Chaotic Good": [
+                "Shoe Thieves",
+                "Flowers",
+                "Fridays",
+                "Magic",
+                "Millennials"
+            ],
+            "Lawful Evil": [
+                "Crabs",
+                "Pies",
+                "Sunbeams",
+                "Wild Wings",
+                "Tigers"
+            ],
+            "Chaotic Evil": [
+                "Moist Talkers",
+                "Spies",
+                "Dale",
+                "Garages",
+                "Jazz Hands"
+            ]
+        },
+        "leagues": {
+            "Good": [
+                "Lovers",
+                "Tacos",
+                "Steaks",
+                "Breath Mints",
+                "Firefighters",
+                "Shoe Thieves",
+                "Flowers",
+                "Fridays",
+                "Magic",
+                "Millennials"
+            ],
+            "Evil": [
+                "Crabs",
+                "Pies",
+                "Sunbeams",
+                "Wild Wings",
+                "Tigers",
+                "Moist Talkers",
+                "Spies",
+                "Dale",
+                "Garages",
+                "Jazz Hands"
+            ]
+        }
+    },
+    {
+        "divisions": {
+            "Lawful Good": [
+                "Lovers",
+                "Tacos",
+                "Steaks",
+                "Breath Mints",
+                "Firefighters"
+            ],
+            "Chaotic Good": [
+                "Shoe Thieves",
+                "Flowers",
+                "Fridays",
+                "Magic",
+                "Millennials"
+            ],
+            "Lawful Evil": [
+                "Crabs",
+                "Pies",
+                "Sunbeams",
+                "Wild Wings",
+                "Tigers"
+            ],
+            "Chaotic Evil": [
+                "Moist Talkers",
+                "Spies",
+                "Dale",
+                "Garages",
+                "Jazz Hands"
+            ]
+        },
+        "leagues": {
+            "Good": [
+                "Lovers",
+                "Tacos",
+                "Steaks",
+                "Breath Mints",
+                "Firefighters",
+                "Shoe Thieves",
+                "Flowers",
+                "Fridays",
+                "Magic",
+                "Millennials"
+            ],
+            "Evil": [
+                "Crabs",
+                "Pies",
+                "Sunbeams",
+                "Wild Wings",
+                "Tigers",
+                "Moist Talkers",
+                "Spies",
+                "Dale",
+                "Garages",
+                "Jazz Hands"
+            ]
+        }
+    },
+    {
+        "divisions": {
+            "Lawful Good": [
+                "Lovers",
+                "Tacos",
+                "Steaks",
+                "Breath Mints",
+                "Firefighters"
+            ],
+            "Chaotic Good": [
+                "Shoe Thieves",
+                "Flowers",
+                "Fridays",
+                "Magic",
+                "Millennials"
+            ],
+            "Lawful Evil": [
+                "Crabs",
+                "Pies",
+                "Sunbeams",
+                "Wild Wings",
+                "Tigers"
+            ],
+            "Chaotic Evil": [
+                "Moist Talkers",
+                "Spies",
+                "Dale",
+                "Garages",
+                "Jazz Hands"
+            ]
+        },
+        "leagues": {
+            "Good": [
+                "Lovers",
+                "Tacos",
+                "Steaks",
+                "Breath Mints",
+                "Firefighters",
+                "Shoe Thieves",
+                "Flowers",
+                "Fridays",
+                "Magic",
+                "Millennials"
+            ],
+            "Evil": [
+                "Crabs",
+                "Pies",
+                "Sunbeams",
+                "Wild Wings",
+                "Tigers",
+                "Moist Talkers",
+                "Spies",
+                "Dale",
+                "Garages",
+                "Jazz Hands"
+            ]
+        }
+    },
+    {
+        "divisions": {
+            "Lawful Good": [
+                "Lovers",
+                "Tacos",
+                "Steaks",
+                "Breath Mints",
+                "Firefighters"
+            ],
+            "Chaotic Good": [
+                "Shoe Thieves",
+                "Flowers",
+                "Fridays",
+                "Magic",
+                "Millennials"
+            ],
+            "Lawful Evil": [
+                "Crabs",
+                "Pies",
+                "Sunbeams",
+                "Wild Wings",
+                "Tigers"
+            ],
+            "Chaotic Evil": [
+                "Moist Talkers",
+                "Spies",
+                "Dale",
+                "Garages",
+                "Jazz Hands"
+            ]
+        },
+        "leagues": {
+            "Good": [
+                "Lovers",
+                "Tacos",
+                "Steaks",
+                "Breath Mints",
+                "Firefighters",
+                "Shoe Thieves",
+                "Flowers",
+                "Fridays",
+                "Magic",
+                "Millennials"
+            ],
+            "Evil": [
+                "Crabs",
+                "Pies",
+                "Sunbeams",
+                "Wild Wings",
+                "Tigers",
+                "Moist Talkers",
+                "Spies",
+                "Dale",
+                "Garages",
+                "Jazz Hands"
+            ]
+        }
+    },
+    {
+        "divisions": {
+            "Wild High": [
+                "Crabs",
+                "Jazz Hands",
+                "Lovers",
+                "Millennials",
+                "Firefighters"
+            ],
+            "Wild Low": [
+                "Flowers",
+                "Sunbeams",
+                "Spies",
+                "Dale",
+                "Tacos"
+            ],
+            "Mild High": [
+                "Tigers",
+                "Breath Mints",
+                "Garages",
+                "Steaks",
+                "Moist Talkers"
+            ],
+            "Mild Low": [
+                "Pies",
+                "Shoe Thieves",
+                "Wild Wings",
+                "Magic",
+                "Fridays"
+            ]
+        },
+        "leagues": {
+
+            "Wild": [
+                "Crabs",
+                "Jazz Hands",
+                "Lovers",
+                "Millennials",
+                "Firefighters",
+                "Flowers",
+                "Sunbeams",
+                "Spies",
+                "Dale",
+                "Tacos"
+            ],
+            "Mild": [
+                "Tigers",
+                "Breath Mints",
+                "Garages",
+                "Steaks",
+                "Moist Talkers",
+                "Pies",
+                "Shoe Thieves",
+                "Wild Wings",
+                "Magic",
+                "Fridays"
+            ]
+        }
+    },
+    {
+        "divisions": {
+            "Wild High": [
+                "Crabs",
+                "Jazz Hands",
+                "Lovers",
+                "Millennials",
+                "Firefighters"
+            ],
+            "Wild Low": [
+                "Flowers",
+                "Sunbeams",
+                "Spies",
+                "Dale",
+                "Tacos"
+            ],
+            "Mild High": [
+                "Tigers",
+                "Breath Mints",
+                "Garages",
+                "Steaks",
+                "Moist Talkers"
+            ],
+            "Mild Low": [
+                "Pies",
+                "Shoe Thieves",
+                "Wild Wings",
+                "Magic",
+                "Fridays"
+            ]
+        },
+        "leagues": {
+
+            "Wild": [
+                "Crabs",
+                "Jazz Hands",
+                "Lovers",
+                "Millennials",
+                "Firefighters",
+                "Flowers",
+                "Sunbeams",
+                "Spies",
+                "Dale",
+                "Tacos"
+            ],
+            "Mild": [
+                "Tigers",
+                "Breath Mints",
+                "Garages",
+                "Steaks",
+                "Moist Talkers",
+                "Pies",
+                "Shoe Thieves",
+                "Wild Wings",
+                "Magic",
+                "Fridays"
+            ]
+        }
+    },
+    {
+        "divisions": {
+            "Wild High": [
+                "Crabs",
+                "Jazz Hands",
+                "Lovers",
+                "Millennials",
+                "Firefighters"
+            ],
+            "Wild Low": [
+                "Flowers",
+                "Sunbeams",
+                "Spies",
+                "Dale",
+                "Tacos"
+            ],
+            "Mild High": [
+                "Tigers",
+                "Breath Mints",
+                "Garages",
+                "Steaks",
+                "Moist Talkers"
+            ],
+            "Mild Low": [
+                "Pies",
+                "Shoe Thieves",
+                "Wild Wings",
+                "Magic",
+                "Fridays"
+            ]
+        },
+        "leagues": {
+
+            "Wild": [
+                "Crabs",
+                "Jazz Hands",
+                "Lovers",
+                "Millennials",
+                "Firefighters",
+                "Flowers",
+                "Sunbeams",
+                "Spies",
+                "Dale",
+                "Tacos"
+            ],
+            "Mild": [
+                "Tigers",
+                "Breath Mints",
+                "Garages",
+                "Steaks",
+                "Moist Talkers",
+                "Pies",
+                "Shoe Thieves",
+                "Wild Wings",
+                "Magic",
+                "Fridays"
+            ]
+        }
     }
-}
+]

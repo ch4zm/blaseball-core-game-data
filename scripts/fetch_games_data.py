@@ -114,16 +114,17 @@ def postprocess_game_data(gameData):
             trim['losingTeamName']='Mexico City Wild Wings'
             trim['losingTeamNickname']='Wild Wings'
 
-        # Always preserve unicode in Dale (desanitized)
-        if trim['homeTeamName']==FULL_DALE_SAFE:
-            trim['homeTeamName'] = FULL_DALE_UTF8
-        elif trim['awayTeamName']==FULL_DALE_SAFE:
-            trim['awayTeamName'] = FULL_DALE_UTF8
+        # Always remove unicode in Dale (sanitized)
+        # https://twitter.com/FHelltiger/status/1311795868622819329
+        if trim['homeTeamName']==FULL_DALE_UTF8:
+            trim['homeTeamName'] = FULL_DALE_SAFE
+        elif trim['awayTeamName']==FULL_DALE_UTF8:
+            trim['awayTeamName'] = FULL_DALE_SAFE
 
-        if trim['homeTeamNickname']==DALE_SAFE:
-            trim['homeTeamNickname'] = DALE_UTF8
-        elif trim['awayTeamNickname']==DALE_SAFE:
-            trim['awayTeamNickname'] = DALE_UTF8
+        if trim['homeTeamNickname']==DALE_UTF8:
+            trim['homeTeamNickname'] = DALE_SAFE
+        elif trim['awayTeamNickname']==DALE_UTF8:
+            trim['awayTeamNickname'] = DALE_SAFE
 
         # add more keys here (hard-coded formulas)
         trim['runDiff'] = abs(game['homeScore'] - game['awayScore'])
