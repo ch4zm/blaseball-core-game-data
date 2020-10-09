@@ -3,7 +3,7 @@ import os
 import json
 
 
-__version__ = "0.8.5"
+__version__ = "0.9.0"
 
 root_path = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 data_path = os.path.abspath(os.path.join(root_path, 'data'))
