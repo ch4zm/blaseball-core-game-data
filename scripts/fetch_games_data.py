@@ -11,11 +11,11 @@ data_path = os.path.abspath(os.path.join(root_path, 'blaseball_core_game_data', 
 GAMES_DATA_JSON = os.path.join(data_path, "games_data_trim.json")
 UPDATE_DATA_JSON = os.path.join(data_path, "update_data.json")
 
-DALE_SAFE = "Dale" # for command line
-DALE_UTF8 = "Dal\u00e9" # for display
+DALE_SAFE = "Dale"
+DALE_UTF8 = "Dal\u00e9"
 
-FULL_DALE_SAFE = "Miami Dale" # for command line
-FULL_DALE_UTF8 = "Miami Dal\u00e9" # for display
+FULL_DALE_SAFE = "Miami Dale"
+FULL_DALE_UTF8 = "Miami Dal\u00e9"
 
 
 def main():
@@ -88,7 +88,22 @@ def postprocess_game_data(gameData):
         for key in keep_keys:
             trim[key] = game[key]
 
-        # Keys to add:
+        # Wings are not mild, ugh
+        if 'Mild' in trim['homeTeamName']:
+            trim['homeTeamName']='Mexico City Wild Wings'
+            trim['homeTeamNickname']='Wild Wings'
+        elif 'Mild' in trim['awayTeamName']:
+            trim['awayTeamName']='Mexico City Wild Wings'
+            trim['awayTeamNickname']='Wild Wings'
+
+        # Always remove unicode in Dale (sanitized)
+        # https://twitter.com/FHelltiger/status/1311795868622819329
+        if trim['homeTeamName']==FULL_DALE_UTF8:
+            trim['homeTeamName'] = FULL_DALE_SAFE
+        elif trim['awayTeamName']==FULL_DALE_UTF8:
+            trim['awayTeamName'] = FULL_DALE_SAFE
+
+        # Copy home/away keys to winning/losing
         add_keys = ['TeamName', 'TeamNickname', 'TeamEmoji', 'Score', 'Odds', 'PitcherName']
         for key in add_keys:
             # Assign winning/losing a value from home/away as appropriate
@@ -98,33 +113,6 @@ def postprocess_game_data(gameData):
             away_key = "away" + key
             trim[winning_key] = game[home_key] if game['homeScore'] > game['awayScore'] else game[away_key]
             trim[losing_key] = game[home_key] if game['homeScore'] < game['awayScore'] else game[away_key]
-
-        # Wings are not mild, ugh
-        if 'Mild' in trim['homeTeamName']:
-            trim['homeTeamName']='Mexico City Wild Wings'
-            trim['homeTeamNickname']='Wild Wings'
-        elif 'Mild' in trim['awayTeamName']:
-            trim['awayTeamName']='Mexico City Wild Wings'
-            trim['awayTeamNickname']='Wild Wings'
-
-        if 'Mild' in trim['winningTeamName']:
-            trim['winningTeamName']='Mexico City Wild Wings'
-            trim['winningTeamNickname']='Wild Wings'
-        elif 'Mild' in trim['losingTeamName']:
-            trim['losingTeamName']='Mexico City Wild Wings'
-            trim['losingTeamNickname']='Wild Wings'
-
-        # Always remove unicode in Dale (sanitized)
-        # https://twitter.com/FHelltiger/status/1311795868622819329
-        if trim['homeTeamName']==FULL_DALE_UTF8:
-            trim['homeTeamName'] = FULL_DALE_SAFE
-        elif trim['awayTeamName']==FULL_DALE_UTF8:
-            trim['awayTeamName'] = FULL_DALE_SAFE
-
-        if trim['homeTeamNickname']==DALE_UTF8:
-            trim['homeTeamNickname'] = DALE_SAFE
-        elif trim['awayTeamNickname']==DALE_UTF8:
-            trim['awayTeamNickname'] = DALE_SAFE
 
         # add more keys here (hard-coded formulas)
         trim['runDiff'] = abs(game['homeScore'] - game['awayScore'])
