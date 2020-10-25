@@ -68,22 +68,37 @@ def postprocess_game_data(gameData):
         # Keys to keep:
         keep_keys = [
             'id',
-            'season',
-            'day',
-            'awayOdds',
+            'outcomes',
+            'awayPitcher',
             'awayPitcherName',
-            'awayScore',
-            'awayTeamEmoji',
+            'awayTeam',
             'awayTeamName',
             'awayTeamNickname',
-            'homeOdds',
+            'awayTeamColor',
+            'awayTeamEmoji',
+            'awayOdds',
+            'awayScore',
+            'homePitcher',
             'homePitcherName',
-            'homeScore',
-            'homeTeamEmoji',
+            'homeTeam',
             'homeTeamName',
             'homeTeamNickname',
+            'homeTeamColor',
+            'homeTeamEmoji',
+            'homeOdds',
+            'homeScore',
+            'season',
             'isPostseason',
-            'shame'
+            'day',
+            'phase',
+            'seriesIndex',
+            'seriesLength',
+            'shame',
+            'weather',
+            'homeBases',
+            'awayBases',
+            'repeatCount',
+            'playCount',
         ]
         for key in keep_keys:
             trim[key] = game[key]
@@ -117,6 +132,8 @@ def postprocess_game_data(gameData):
         # add more keys here (hard-coded formulas)
         trim['runDiff'] = abs(game['homeScore'] - game['awayScore'])
         trim['whoWon'] = 'home' if game['homeScore'] > game['awayScore'] else 'away'
+
+        # season 11 could use some additional fields, for ease of use of data
 
         trimGameData.append(trim)
 
