@@ -30,7 +30,7 @@ That's all there is to it!
 To install this package using pip:
 
 ```
-pip install blaseball-core-game-data
+pip install git+https://github.com/ch4zm/blaseball-core-game-data.git#egg=blaseball_core_game_data
 ```
 
 ### source
